@@ -1,1 +1,1 @@
-## Simple Resful ECM Server API Using Java Spring Boot
+## Simple ECM Server (Restful API) Using Java Spring Boot
