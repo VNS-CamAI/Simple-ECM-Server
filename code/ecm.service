@@ -1,0 +1,17 @@
+[Unit]
+Description=ecm service
+After=syslog.target network.target
+Before=httpd.service
+
+[Service]
+User=root
+Group=root
+ExecStart=/usr/bin/java -jar /home/ubuntu/SBA_BE/ecm-service-0.1.jar --spring.config.location=/home/ubuntu/SBA_BE/application.yml -Dlogging.config=/home/ubuntu/SBA_BE/logback-spring.xml
+StandardOutput=
+StandardError=
+WorkingDirectory=/home/ubuntu/SBA_BE/
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
